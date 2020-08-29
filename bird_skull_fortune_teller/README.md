@@ -2,8 +2,8 @@
 
 ## Build instructions
 - 3-Axis Robotic Mechanisms: Animatronic Necks & Torsos by Jim Kundig 
--- https://www.stanwinstonschool.com/tutorials/3-axis-robotic-mechanisms-animatronic-necks-torsos-part-1
--- https://www.stanwinstonschool.com/tutorials/3-axis-robotic-mechanisms-animatronic-necks-torsos-part-2
+  - https://www.stanwinstonschool.com/tutorials/3-axis-robotic-mechanisms-animatronic-necks-torsos-part-1
+  - https://www.stanwinstonschool.com/tutorials/3-axis-robotic-mechanisms-animatronic-necks-torsos-part-2
 
 
 
