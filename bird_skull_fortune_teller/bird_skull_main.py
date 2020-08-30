@@ -1,12 +1,5 @@
-import maestro
-import time
-import keyboard
+import fortun_teller
 
-servo = maestro.Controller()
-servo.runScriptSub(1)
-time.sleep(.5)
-servo.runScriptSub(2)
-time.sleep(1.5)
-#servo.setAccel(2,0)
-servo.runScriptSub(0)
-servo.close
+bird = fortun_teller.Head()
+
+bird.move("right", "fast")
