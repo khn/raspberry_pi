@@ -1,10 +1,13 @@
 import fortun_teller
+import click
 
 bird = fortun_teller.Head()
 
 
 while True:
-    x = input('Where would you like me to go? ')
+    print("Ready to move the head")
+    x = click.getchar()
+    print(str(x))
     if x == "r":
         bird.move("right", "fast")
     if x == "l":
