@@ -5,17 +5,35 @@ bird = fortun_teller.Head()
 
 
 while True:
-    print("Ready to move the head")
     x = click.getchar()
-    print(str(x))
+    print("Key Pressed " + str(x))
     if x == "r":
         bird.move("right", "fast")
-    if x == "l":
+    elif x == "l":
         bird.move("left", "fast")
-    if x == "u":
+    elif x == "u":
         bird.move("up", "fast")
-    if x == "d":
-        bird.move("down","fast")
-    if x == "q":
+    # keyboard shortcuts
+    elif x == "a": # left
+        bird.move("turnl",200)
+    elif x == "d": # right
+        bird.move("turnr",200)
+    elif x == "w": # up
+        bird.move("up",200)
+    elif x == "s": # Down
+        bird.move("down",200)
+    elif x == "e": # tilt right
+        bird.move("tiltr",200)
+    elif x == "q": # tilt left
+        bird.move("tiltl",200)
+    elif x == ",": # Center
+        bird.move("centerlr",180)
+    elif x == ".": # Center
+        bird.move("centerud",180)
+    elif x == "x": # Center
+        bird.move("center",150)
+    elif x == "1": # Quit to terminal
         bird.close()
         break
+    else:
+        bird.move("error", "fast")

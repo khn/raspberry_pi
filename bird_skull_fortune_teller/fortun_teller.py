@@ -43,7 +43,7 @@ class Head:
         self.maxR = MAX_R
 
     def _move_head(self, where, speed):
-        print("Well, here we are")
+        # print("Well, here we are")
         if where == "right":
             self.head.setSpeed(0, 60)  # set speed of servo 1
             self.head.setSpeed(1, 60)
@@ -54,9 +54,9 @@ class Head:
             self.head.setTarget(2, 5856 )  # set servo to move to center position
             time.sleep(.3)
         elif where == "left":
-            self.head.setAccel(0, 200)  # set servo 0 acceleration to 4
-            self.head.setAccel(1, 200)  # set servo 0 acceleration to 4
-            self.head.setAccel(2, 180)  # set servo 0 acceleration to 4
+            self.head.setAccel(0, 200)
+            self.head.setAccel(1, 200)
+            self.head.setAccel(2, 180)
             self.head.setSpeed(0, 0)  # set speed of servo 1
             self.head.setSpeed(1, 0)
             self.head.setSpeed(2, 0)
@@ -68,26 +68,135 @@ class Head:
             self.head.setTarget(1, 5868 )  # set servo to move to center position
             # self.head.setTarget(2, 7697 )  # set servo to move to center position
             # self.head.setSpeed(1, 10)  # set speed of servo 1
-            time.sleep(.7)
-            self.head.setTarget(0, 5190 )  # set servo to move to center position
-            self.head.setTarget(1, 6843 )  # set servo to move to center position
+            # time.sleep(.7)
+            # self.head.setTarget(0, 5190 )  # set servo to move to center position
+            # self.head.setTarget(1, 6843 )  # set servo to move to center position
             # self.head.setTarget(2, 7697 )  # set servo to move to center position
-            time.sleep(.3)
-            self.head.setSpeed(0, 170)  # set speed of servo 1
-            self.head.setSpeed(1, 170)
-            self.head.setTarget(0, 5488 )  # set servo to move to center position
+            # time.sleep(.3)
+            # self.head.setSpeed(0, 170)  # set speed of servo 1
+            # self.head.setSpeed(1, 170)
+            # self.head.setTarget(0, 5488 )  # set servo to move to center position
+            # self.head.setTarget(1, 5934 )  # set servo to move to center position
+            # self.head.setTarget(2, 7697 )  # set servo to move to center position
+            # time.sleep(.3)
+        elif where == "turnl":
+            self.head.setSpeed(2, speed)
+            self.head.setAccel(2, 200)
+            self.head.setTarget(2, 4471 )
+            # time.sleep(.3)
+        elif where == "turnr":
+            self.head.setSpeed(2, speed)
+            self.head.setAccel(2, 200)
+            self.head.setTarget(2, 6910 )
+            # time.sleep(.3)
+        elif where == "up":
+            self.head.setSpeed(0, speed)
+            self.head.setSpeed(1, speed)
+            self.head.setAccel(0, 200)
+            self.head.setAccel(1, 200)
+            self.head.setTarget(0, 7504 )
+            self.head.setTarget(1, 4215 )
+            # time.sleep(.3)
+        elif where == "down":
+            self.head.setSpeed(0, speed)
+            self.head.setSpeed(1, speed)
+            self.head.setAccel(0, 200)
+            self.head.setAccel(1, 200)
+            self.head.setTarget(0, 5636 )
+            self.head.setTarget(1, 6182 )
+            # time.sleep(.3)
+        elif where == "tiltr":
+            self.head.setSpeed(0, speed)
+            self.head.setSpeed(1, speed)
+            self.head.setAccel(0, 200)
+            self.head.setAccel(1, 200)
+            self.head.setTarget(0, 7487 )
+            self.head.setTarget(1, 6033 )
+            # time.sleep(.3)
+        elif where == "tiltl":
+            self.head.setSpeed(0, speed)
+            self.head.setSpeed(1, speed)
+            self.head.setAccel(0, 200)
+            self.head.setAccel(1, 200)
+            self.head.setTarget(0, 6314 )
+            self.head.setTarget(1, 3968 )
+            # time.sleep(.3)
+        elif where == "centerlr":
+            self.head.setSpeed(2, speed)
+            self.head.setAccel(2, 180)
+            self.head.setTarget(2, 5872 )
+            # time.sleep(.3)
+        elif where == "centerud":
+            self.head.setSpeed(0, speed)
+            self.head.setSpeed(1, speed)
+            self.head.setAccel(0, 200)
+            self.head.setAccel(1, 200)
+            self.head.setTarget(0, 6050 )
+            self.head.setTarget(1, 5455 )
+            # time.sleep(.3)
+        elif where == "center":
+            self.head.setSpeed(0, speed)
+            self.head.setSpeed(1, speed)
+            self.head.setSpeed(2, speed)
+            self.head.setAccel(0, 200)
+            self.head.setAccel(1, 200)
+            self.head.setAccel(2, 180)
+            self.head.setTarget(0, 6050 )
+            self.head.setTarget(1, 5455 )
+            self.head.setTarget(2, 5872 )
+            # time.sleep(.3)
+        else: # Error. Shakes head in shame and disapointment
+            self.head.setSpeed(2, 170)
+            self.head.setAccel(2, 220)
+            self.head.setTarget(0, 5653 )  # set servo to move to center position
             self.head.setTarget(1, 5934 )  # set servo to move to center position
-            # self.head.setTarget(2, 7697 )  # set servo to move to center position
+            self.head.setTarget(2, 4298 )  # set servo to move to center position
             time.sleep(.3)
+            self.head.setTarget(2, 7508 )  # set servo to move to center position
+            time.sleep(.3)
+            self.head.setTarget(2, 4298 )  # set servo to move to center position
+            time.sleep(.3)
+            self.head.setTarget(2, 7508 )  # set servo to move to center position
+            time.sleep(.3)
+            self.head.setTarget(2, 5856 )  # set servo to move to center position
+            # time.sleep(.3)
 
     def move(self, look, speed):
         if look == "right":
             self._move_head("right", speed)
         elif look == "left":
             self._move_head("left", speed)
+        elif look == "turnl":
+            self._move_head("turnl", speed)
+        elif look == "turnr":
+            self._move_head("turnr", speed)
+        elif look == "up":
+            self._move_head("up", speed)
+        elif look == "down":
+            self._move_head("down", speed)
+        elif look == "tiltr":
+            self._move_head("tiltr", speed)
+        elif look == "tiltl":
+            self._move_head("tiltl", speed)
+        elif look == "centerlr":
+            self._move_head("centerlr", speed)
+        elif look == "centerud":
+            self._move_head("centerud", speed)
+        elif look == "center":
+            self._move_head("center", speed)
+        else:
+            self._move_head("error", speed)
 
     def close(self):
         self.head.close()
 
+    def _move_head_new(self, where):
+        # Get setting from dictionary
+        # Try to find command in dictionary
+
+        # Expcept send the error code (shakes head in shame and dissapointment
 
 
+        """ I think I could make the movement entirly its own function. Maybe. It's tough because if we want to do more than
+        one movement, do we handle it in the move function or does move, call an assembler that calls the move method.r"""
+        pass
