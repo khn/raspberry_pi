@@ -49,9 +49,9 @@ class Head:
             self.head.setSpeed(1, 60)
             self.head.setSpeed(2, 30)
             # self.head.runScriptSub(0)
-            self.head.setTarget(0, 5488 )  # set servo to move to center position
-            self.head.setTarget(1, 5934 )  # set servo to move to center position
-            self.head.setTarget(2, 5856 )  # set servo to move to center position
+            self.head.setTarget(0, 5488)  # set servo to move to center position
+            self.head.setTarget(1, 5934)  # set servo to move to center position
+            self.head.setTarget(2, 5856)  # set servo to move to center position
             time.sleep(.3)
         elif where == "left":
             self.head.setAccel(0, 200)
