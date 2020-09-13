@@ -1,39 +1,22 @@
-import fortun_teller
+import PuppetMaster
 import click
+import random
 
-bird = fortun_teller.Head()
+bird = PuppetMaster.PuppetMaster()
 
 
 while True:
+    print("Total number of fortunes to choose from - " + str(bird.number_of_fortunes()))
     x = click.getchar()
-    print("Key Pressed " + str(x))
-    if x == "r":
-        bird.move("right", "fast")
-    elif x == "l":
-        bird.move("left", "fast")
-    elif x == "u":
-        bird.move("up", "fast")
-    # keyboard shortcuts
-    elif x == "a": # left
-        bird.move("turnl",200)
-    elif x == "d": # right
-        bird.move("turnr",200)
-    elif x == "w": # up
-        bird.move("up",200)
-    elif x == "s": # Down
-        bird.move("down",200)
-    elif x == "e": # tilt right
-        bird.move("tiltr",200)
-    elif x == "q": # tilt left
-        bird.move("tiltl",200)
-    elif x == ",": # Center
-        bird.move("centerlr",180)
-    elif x == ".": # Center
-        bird.move("centerud",180)
-    elif x == "x": # Center
-        bird.move("center",150)
-    elif x == "1": # Quit to terminal
-        bird.close()
+    rand = random.randint(1, 20)
+    if x == "q":
         break
-    else:
-        bird.move("error", "fast")
+    try:
+        if 1 <= int(x) <= bird.number_of_fortunes():
+            bird.play_fortune(int(x))
+        else:
+            print("Please choose a number between 1 and " + str(bird.number_of_fortunes()))
+    except:
+        print("Try again dumb dumb")
+    finally:
+        print("Random Number - " + str(rand))
