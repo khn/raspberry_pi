@@ -1,50 +1,16 @@
 {
   "fortunes": [
     {
-      "seq": 1,
-      "name": "first_fortune",
-      "sound_file": "path_to_file",
-      "movement": [
+      "fort_num": 1,
+      "fort_name": "First Fortune",
+      "sound_file": "Path/to/file.sound",
+      "animate": [
         {
           "SEQ": 1,
           "set_pos": [
-            {"pin_num": 0, "acceleration": 180, "speed": 60, "position": 5488},
-            {"pin_num": 1, "acceleration": 180, "speed": 60, "position": 5934},
-            {"pin_num": 2, "acceleration": 180, "speed": 60, "position": 5856}
-          ],
-          "wait": 1
-        },
-        {
-          "SEQ": 2,
-          "set_pos": [
-            {"pin_num": 0, "acceleration": 180, "speed": 60, "position": 5190},
-            {"pin_num": 1, "acceleration": 180, "speed": 60, "position": 6843},
-            {"pin_num": 2, "acceleration": 180, "speed": 60, "position": 7697}
-          ],
-          "wait": 1
-        }
-      ]
-    },
-    {
-      "seq": 2,
-      "name": "second_fortune",
-      "sound_file": "path_to_file",
-      "movement": [
-        {
-          "SEQ": 1,
-          "set_pos": [
-            {"pin_num": 0, "acceleration": 180, "speed": 60, "position": 6050},
-            {"pin_num": 1, "acceleration": 180, "speed": 60, "position": 5455},
-            {"pin_num": 2, "acceleration": 180, "speed": 60, "position": 5872}
-          ],
-          "wait": 2
-        },
-        {
-          "SEQ": 2,
-          "set_pos": [
-            {"pin_num": 0, "acceleration": 180, "speed": 60, "position": 6314},
-            {"pin_num": 1, "acceleration": 180, "speed": 60, "position": 3968},
-            {"pin_num": 2, "acceleration": 180, "speed": 60, "position": 5872}
+            {"channel": 0, "acceleration": 180, "speed": 60, "position": 5488},
+            {"channel": 1, "acceleration": 180, "speed": 60, "position": 5934},
+            {"channel": 2, "acceleration": 180, "speed": 60, "position": 5856}
           ],
           "wait": 1
         }
