@@ -1,6 +1,7 @@
 import json
 #import maestro
 import time
+import pygame
 
 
 class PuppetMaster:
@@ -16,6 +17,7 @@ class PuppetMaster:
         #self.servo_controller = maestro.Controller()
         with open('fortunes.json') as json_file:
             self.script = json.load(json_file)
+        pygame.init()
 
     def number_of_fortunes(self):
         # Returns the total number of fortunes in the JSON file.
@@ -34,6 +36,9 @@ class PuppetMaster:
                     # At this level we have access to fortune number, fortune name and the path to the sound file.
                     print("Fortune Name " + fortune_list[fortune]['fort_name'])
 
+                    pygame.mixer.music.load(str(fortune_list[fortune]['sound_file']))
+                    pygame.mixer.music.play(0)
+
                     # Loops through LIST each sequence or movement set, of the full animation.
                     for step in fortune_list[fortune]['animate']:
                         # Access to the sequence number of the animation
@@ -46,8 +51,8 @@ class PuppetMaster:
                             print("    Accel - " + str(seq['acceleration']))
                             print("    Speed - " + str(seq['speed']))
                             print("    Position - " + str(seq['position']))
-                        time.sleep(step['wait'])
-                        print("Wait time " + str(step['wait']))
+                        time.sleep(float(step['wait']))
+                        print("Wait time " + str(float(step['wait'])))
                         # Wait time until moving on to the next step
 
     def __puppeteer(self, channel, accel, speed, position):

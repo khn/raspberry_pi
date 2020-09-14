@@ -16,7 +16,7 @@ while True:
             bird.play_fortune(int(x))
         else:
             print("Please choose a number between 1 and " + str(bird.number_of_fortunes()))
-    except:
-        print("Try again dumb dumb")
+    except Exception as e:
+        print("Try again dumb dumb " + str(e))
     finally:
         print("Random Number - " + str(rand))
