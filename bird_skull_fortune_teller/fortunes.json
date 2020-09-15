@@ -1,0 +1,127 @@
+{
+  "fortune_list": [
+    {
+      "fort_num": 1,
+      "fort_name": "First Fortune",
+      "sound_file": "/Users/keithnelson/Documents/Sounds/Hey_who_turned_out_the_lights.wav",
+      "animate": [
+        {
+          "SEQ": 1,
+          "movement_name": "Left and down",
+          "set_pos": [
+            {"channel": 0, "acceleration": 180, "speed": 0, "position": 5636},
+            {"channel": 1, "acceleration": 180, "speed": 0, "position": 6182},
+            {"channel": 2, "acceleration": 180, "speed": 0, "position": 4471}
+          ],
+          "wait": ".3"
+        },
+         {
+          "SEQ": 2,
+          "movement_name": "Left tilt up",
+          "set_pos": [
+            {"channel": 0, "acceleration": 180, "speed": 60, "position": 6314},
+            {"channel": 1, "acceleration": 180, "speed": 60, "position": 3968},
+            {"channel": 2, "acceleration": 180, "speed": 60, "position": 5872}
+          ],
+          "wait": ".7"
+        },
+         {
+          "SEQ": 3,
+          "movement_name": "Center Down",
+          "set_pos": [
+            {"channel": 0, "acceleration": 180, "speed": 60, "position": 5636},
+            {"channel": 1, "acceleration": 180, "speed": 60, "position": 6182},
+            {"channel": 2, "acceleration": 180, "speed": 60, "position": 5872}
+          ],
+          "wait": "1"
+        },
+         {
+          "SEQ": 4,
+          "movement_name": "Center Full",
+          "set_pos": [
+            {"channel": 0, "acceleration": 180, "speed": 60, "position": 6050},
+            {"channel": 1, "acceleration": 180, "speed": 60, "position": 5455},
+            {"channel": 2, "acceleration": 180, "speed": 60, "position": 5872}
+          ],
+          "wait": "1"
+        }
+      ]
+    },
+    {
+      "fort_num": 2,
+      "fort_name": "Second Fortune",
+      "sound_file": "Path/to/file.sound",
+      "animate": [
+        {
+          "SEQ": 1,
+          "movement_name": "as",
+          "set_pos": [
+            {"channel": 0, "acceleration": 180, "speed": 60, "position": 5488},
+            {"channel": 1, "acceleration": 180, "speed": 60, "position": 5934},
+            {"channel": 2, "acceleration": 180, "speed": 60, "position": 5856}
+          ],
+          "wait": ".2"
+        },
+         {
+          "SEQ": 2,
+          "movement_name": "asd",
+          "set_pos": [
+            {"channel": 0, "acceleration": 180, "speed": 60, "position": 5488},
+            {"channel": 1, "acceleration": 180, "speed": 60, "position": 5934},
+            {"channel": 2, "acceleration": 180, "speed": 60, "position": 5856}
+          ],
+          "wait": "1"
+        }
+      ]
+    },
+    {
+      "fort_num": 3,
+      "fort_name": "Third Fortune",
+      "sound_file": "Path/to/file.sound",
+      "animate": [
+        {
+          "SEQ": 1,
+          "movement_name": "right - center",
+          "set_pos": [
+            {"channel": 0, "acceleration": 220, "speed": 170, "position": 5653},
+            {"channel": 1, "acceleration": 220, "speed": 170, "position": 5934},
+            {"channel": 2, "acceleration": 220, "speed": 170, "position": 4298}
+          ],
+          "wait": ".3"
+        },
+         {
+          "SEQ": 2,
+          "movement_name": "left",
+          "set_pos": [
+            {"channel": 2, "acceleration": 220, "speed": 170, "position": 7508}
+          ],
+          "wait": ".3"
+        },
+         {
+          "SEQ": 3,
+          "movement_name": "right",
+          "set_pos": [
+            {"channel": 2, "acceleration": 220, "speed": 170, "position": 4298}
+          ],
+          "wait": ".3"
+        },
+         {
+          "SEQ": 4,
+          "movement_name": "left",
+          "set_pos": [
+            {"channel": 2, "acceleration": 220, "speed": 170, "position": 7508}
+          ],
+          "wait": ".3"
+        },
+         {
+          "SEQ": 5,
+          "movement_name": "Center",
+          "set_pos": [
+            {"channel": 2, "acceleration": 220, "speed": 170, "position": 5856}
+          ],
+          "wait": "0"
+        }
+      ]
+    }
+  ]
+}
