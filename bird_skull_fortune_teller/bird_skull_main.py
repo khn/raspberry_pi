@@ -1,6 +1,10 @@
 import PuppetMaster
 import click
+<<<<<<< HEAD
+import pygame
+=======
 import random
+>>>>>>> 2d527bb5f39db7c55af5c0ff6da98762adfb6aaa
 
 bird = PuppetMaster.PuppetMaster()
 
