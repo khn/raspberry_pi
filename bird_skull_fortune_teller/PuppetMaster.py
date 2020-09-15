@@ -17,6 +17,7 @@ class PuppetMaster:
         #self.servo_controller = maestro.Controller()
         with open('fortunes.json') as json_file:
             self.script = json.load(json_file)
+        # Initialize pygame to play sounds
         pygame.init()
 
     def number_of_fortunes(self):
@@ -35,10 +36,10 @@ class PuppetMaster:
                 if fortune_num == fortune_list[fortune]['fort_num']:
                     # At this level we have access to fortune number, fortune name and the path to the sound file.
                     print("Fortune Name " + fortune_list[fortune]['fort_name'])
-
+                    # Loads sound file (pulled from JSON) and begins play.
                     pygame.mixer.music.load(str(fortune_list[fortune]['sound_file']))
-                    pygame.mixer.music.play(0)
-
+                    # Play once
+                    pygame.mixer.music.play()
                     # Loops through LIST each sequence or movement set, of the full animation.
                     for step in fortune_list[fortune]['animate']:
                         # Access to the sequence number of the animation

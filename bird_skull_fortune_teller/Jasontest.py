@@ -2,6 +2,9 @@ import json
 import maestro
 import time
 
+"""This is to test all the fields in the JSON file. I suspect it'll get deleted eventually and replaced with a 
+ method to simply loop through and print out the json that could be called during debugging. """
+
 # Opening JSON file
 with open('fortunes.json') as json_file:
     data = json.load(json_file)
@@ -22,8 +25,4 @@ for scene in data.values():
                 print("Wait time " + str(this['wait']))
 
 
-class Tempest:
-
-    def __init__(self):
-        pass
 
