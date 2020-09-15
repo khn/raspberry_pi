@@ -1,5 +1,6 @@
 import fortun_teller
 import click
+import pygame
 
 bird = fortun_teller.Head()
 
