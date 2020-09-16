@@ -1,7 +1,7 @@
 import json
-#import maestro
+import maestro_uart
 import time
-import pygame
+# import pygame
 
 
 class PuppetMaster:
@@ -14,11 +14,11 @@ class PuppetMaster:
 
     def __init__(self):
         # Load in JSON file and parse it into an object
-        #self.servo_controller = maestro.Controller()
+        self.servo_controller = maestro_uart.MaestroUART()
         with open('fortunes.json') as json_file:
             self.script = json.load(json_file)
         # Initialize pygame to play sounds
-        pygame.init()
+        # pygame.init()
 
     def number_of_fortunes(self):
         # Returns the total number of fortunes in the JSON file.
@@ -59,9 +59,9 @@ class PuppetMaster:
     def __puppeteer(self, channel, accel, speed, position):
         # Sends the movement commands using the maestro library.
         # This might turn into its own class so that this object won't care what controller library we're using.
-        pass
-       # self.servo_controller.setAccel(channel, accel)
-       # self.servo_controller.setSpeed(channel, speed)
-       # self.servo_controller.setTarget(channel, position)
+        # pass
+        self.servo_controller.set_acceleration(channel, accel)
+        self.servo_controller.set_speed(channel, speed)
+        self.servo_controller.set_target(channel, position)
 
 
