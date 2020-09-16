@@ -14,7 +14,7 @@ class PuppetMaster:
 
     def __init__(self):
         # Load in JSON file and parse it into an object
-        self.servo_controller = maestro_uart.MaestroUART()
+        self.servo_controller = maestro_uart.MaestroUART('/dev/ttyAMA0', 9600)
         with open('fortunes.json') as json_file:
             self.script = json.load(json_file)
         # Initialize pygame to play sounds
