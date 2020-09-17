@@ -1,10 +1,10 @@
-# Animatronic Bird Head Fortune Teller 
+# Animatronic Bird Head Controller 
 
 ## Usage
 - For running as part of a fortune teller, run `bird_skull_main.py`
   - Once sound is added I _think_ this will need to be run as root. 
+- Running via the keyboard run `bird_skull_keyboard_control.py`
 - All servo movements and fortune sound files are specified in `fortunes.json`
-- Designed to run on a Raspberry Pi Zero
 
 ## Build instructions
 - 3-Axis Robotic Mechanisms: Animatronic Necks & Torsos by Jim Kundig 
@@ -14,4 +14,4 @@
 ## Software
 Extra libraries (and instructions) for using Maestro boards
 - Pololu : https://www.pololu.com/
-- Maestro UART code from:  https://rimstar.org/science_electronics_projects/servo_motor_with_raspberry_pi_and_pololu_maestro.htm
+- Maestro Library:  https://github.com/FRC4564/Maestro
