@@ -6,7 +6,7 @@ import time
 
 class PuppetMaster:
     """Class controls all aspects of animitronic movement. It will parse a JSON file that contains all
-    info regaurding a given set of fortunes. (Specified in the _init_ right now but might be passed in
+    info regarding a given set of fortunes. (Specified in the _init_ right now but might be passed in
     as an argument at some point.) It will play sounds, move servos, control the timing of each movement
     and will have a public method for returning how many total fortunes there are. The 'puppeteer' method
     might need to be broken out into its own class at some point. I'm either going to delete the print
@@ -63,5 +63,3 @@ class PuppetMaster:
         self.servo_controller.set_acceleration(channel, accel)
         self.servo_controller.set_speed(channel, speed)
         self.servo_controller.set_target(channel, position)
-
-
