@@ -1,7 +1,7 @@
 import json
 import maestro_uart
 import time
-# import pygame
+import pandas as pd
 
 
 class PuppetMaster:
@@ -17,6 +17,8 @@ class PuppetMaster:
         self.servo_controller = maestro_uart.MaestroUART('/dev/ttyAMA0', 9600)
         with open('fortunes.json') as json_file:
             self.script = json.load(json_file)
+            df = pd.json_normalize(json_file)
+
         # Initialize pygame to play sounds
         # pygame.init()
 
